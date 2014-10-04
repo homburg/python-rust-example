@@ -3,7 +3,7 @@
 run: libit-works.so libit-works-c.so
 	./hello.py
 
-libit-works.o: it-works.c it-works.h
+libit-works.o: it-works.c
 	gcc -fpic -Wall -Werror -c it-works.c
 
 libit-works-c.so: libit-works.o

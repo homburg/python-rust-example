@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void it_works_c(void)
+extern void it_works(const char *input, int j)
 {
-	puts("Hello, C!");
+	printf("Hello, C! say: %s (%d)\n", input, j);
 }

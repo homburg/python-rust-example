@@ -6,16 +6,13 @@ from cffi import FFI
 ffi = FFI()
 
 ffi.cdef("""
-        void it_works();
-        void it_works_c();
+        void it_works(const char* input, const int j);
 """)
 
-rust = ffi.dlopen("./libit-works.so")
-
 C = ffi.dlopen("./libit-works-c.so")
+C.it_works("something from python", 52)
 
-
-C.it_works_c()
-rust.it_works()
+rust = ffi.dlopen("./libit-works.so")
+rust.it_works("something from python to rust", 42)
 
 print("fin!")
