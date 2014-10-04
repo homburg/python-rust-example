@@ -12,5 +12,9 @@ pub extern "C" fn it_works(input: *const i8, j: int) {
 			""
 		},
 	};
-	println!("Hello, rust! say: {} ({})", str, j);
+	let padding = match str {
+		"" => "",
+		_ => " ",
+	};
+	println!("Hello, rust! say:{}{} ({})", padding, str, j);
 }
