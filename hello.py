@@ -1,6 +1,6 @@
 #!/usr/bin/env python2.7
 
-print("Hello python")
+print("Hello, python!")
 
 from cffi import FFI
 ffi = FFI()
